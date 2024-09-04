@@ -1,4 +1,5 @@
 $UPN = Read-Host "Enter the UPN"
+$UPN = $UPN.Trim()
 Connect-ExchangeOnline -UserPrincipalName $UPN
 
 $orgAudit = (Get-OrganizationConfig).AuditDisabled
